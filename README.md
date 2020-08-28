@@ -2,13 +2,6 @@
 
 ## Atualize os seus dados:
 
-<<<<<<< HEAD
-- Nome: Renato Júnior De Moura          
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
-=======
 - Nome:Renato Júnior De Moura		
 - Matrícula:15.2.8113
 - Curso:sistemas de informação 
