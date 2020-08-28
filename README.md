@@ -7,7 +7,7 @@
 - Curso:sistemas de informação 
 - Semestre/Ano correntes:2020/3 - PLE Emergencial COVID-19
 - Link para o seu GitHub:[https://github.com/renatomou](https://github.com/renatomour)
->>>>>>> b371741270128608150dbea7b7d8bdc441f43821
+
 
 ## [Projeto final:](./Projeto/README.md) 
 Sistema de reserva da sala de reuniões do ICEA.
