@@ -2,7 +2,7 @@
 
 ## Atualize os seus dados:
 
-- Nome:
+- Nome: Renato Júnior De Moura          
 - Matrícula:
 - Curso:
 - Semestre/Ano correntes:
