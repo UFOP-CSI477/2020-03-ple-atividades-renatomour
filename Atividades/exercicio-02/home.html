@@ -5,34 +5,61 @@
     <title>Home</title>
 
      <style type="text/css">
-        
+        @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+      
+
         body{
           margin: 0;
-
+          background-color:lavender;
+          
         }
+
+        
           h1{
-            font-size: 30pt;
+            font-size: 34pt;
             font-family: Arial, Helvetica, sans-serif;
             
           }
           h2{
             font-family: 'Times New Roman', Times, serif;
-            font-size: large 20pt;
+            font-size: large 30pt;
             color: darkred ;
+          }
+          a{
+            color: white;
+            background-color: rgb(42, 177, 42);
+             text-decoration: none;
+             padding: 10px;
+          }
+          a:hover{
+           background-color: yellowgreen;
+
+          }
+         
+         
+          .flex{
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content:center;
           }
      </style>
   </head>
 
   <body>
+   
     <header>
       <h1>Página Principal </h1>
       <h2> Bem-vindos!</h2>
+      <center>
       <img width="30%" src="..//exercicio-01/img/logo-decsi.png" alt="Data">
+    </center>
     </header>
 
     <br><br><br>
-
-    <div>
+    
+    <div class="flex">
       <a href="home.html">Home</a> |
       <a href="cadastros.html">Cadastros</a> |
       <a href="lancamentos.html">Lançamentos</a> |
