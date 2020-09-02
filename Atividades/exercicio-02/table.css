@@ -1,0 +1,44 @@
+table{
+    width: 100%;
+}
+
+table ,th ,td{
+
+border: 1px solid black;
+border-collapse: collapse;
+
+}
+
+th ,td{
+
+padding: 10px;
+}
+
+th{
+    font-size: 14pt;
+    font-family: 'Times New Roman', Times, serif;
+     font-style: inherit;
+     
+}
+
+caption{
+    font-weight: bold;
+    font-size: 20pt;
+    font-style: italic;
+}
+
+tbody tr:hover{
+
+    background-color:rgb(42, 177, 42);
+}
+
+tbody ,tr ,td {
+    text-align: center;
+}
+thead{
+    background-color: yellow;
+}
+
+tfoot tr{
+    background-color:red;
+}

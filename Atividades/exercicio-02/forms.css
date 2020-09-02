@@ -1,0 +1,21 @@
+label{
+    font-weight: bold;
+}
+input[type ="text"]{
+
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    
+}
+
+.controle{
+
+    padding: 20px;
+    border: 1px solid gray;
+}
+form{
+    padding: 20px;
+    font-weight: bold;
+    border: 1px solid gray;
+}
