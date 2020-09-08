@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, shrink-to-fit=no">
+
+    
+    <title>Introdução ao JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous">
+
+    <script>
+        'use strict'
+    
+        function Pessoa(nome, sobrenome,idade) {
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            this.idade = idade;
+        }
+
+        function carregarDados() {
+
+            const nome = window.prompt('Insira seu nome:');
+            const sobrenome = window.prompt('Insira o seu sobrenome');
+            const idade = window.prompt('Insira sua idade');
+            
+            const pessoa = new Pessoa(nome, sobrenome, idade);
+            
+           
+
+            document.getElementById("data").innerHTML = Date();
+            document.getElementById("nome").innerHTML = pessoa.nome;
+             document.getElementById("sobrenome").innerHTML = pessoa.sobrenome;
+         
+
+            console.log(pessoa);
+
+            for(let i = 0; i < 10; i++) {
+                console.log(i);
+            }
+        }
+
+        function carregarDadosDoForm() {
+            const nome = document.frmDados.nome.value;
+            const sobrenome = document.frmDados.sobrenome.value;
+            const idade = document.frmDados.idade.value;
+            const pessoa = new Pessoa(nome, sobrenome, idade);
+            
+            console.log(pessoa);
+
+            window.alert(`Dados carregados com sucesso: ${nome} ${sobrenome}`);
+
+            let obj = {
+                name : nome,
+                lastname : sobrenome,
+                address: {
+                    street: '5th avenue'
+                }
+            };
+
+            console.log(obj);
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <script>
+        document.write('Olá, mundo!');
+        
+    </script>
+    
+    <div class="jumbotron" id="dados">
+        <div id="data"></div>
+        <div id="nome"></div>
+        <div id="sobrenome"></div>
+         <h1>Bem-vindos! <br>cadastro de Formulário</h1>
+      <p></p>
+    </div>
+
+    <form action="post" name="frmDados">
+        <label for="nome" id="labelNome">Nome:</label>
+        <input type="text" name="nome" placeholder="nome">
+          <br>
+        <label for="sobrenome" id="labelNome">Sobrenome:</label>
+        <input type="text" name="sobrenome"placeholder="sobrenome">
+          <br>
+        <label for="idade" id="labelNome">Idade:</label>
+        <input type="text" name="idade"placeholder="idade">
+          <br>
+    </form>
+
+    <input type="button" class="btn btn-success" value="Carregar" onclick="carregarDados()">
+    <input type="button" class="btn btn-info" value="Carregar do Formulário" onclick="carregarDadosDoForm()">
+
+</body>
+</html>
