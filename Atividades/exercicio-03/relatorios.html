@@ -2,18 +2,27 @@
 <html lang="br" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, shrink-to-fit=no">
+
+
     <title>Relatórios</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous">
+
   </head>
   <body>
     <header>
       <h1>Relatórios</h1>
-      <img width="25%" src="./img/logo-decsi.png" alt="Data">
+      <img width="20%" src="./img/logo-decsi.png" alt="Data">
     </header>
-
-    <table border="5">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
       <caption>Sistemas WEB-477 </caption>
       <thead>
-        <tr>
+        <tr class="thead-dark">
           <th>Nome</th>
           <th>RG</th>
           <th>CPF</th>
@@ -83,15 +92,15 @@
       </tfoot>
 
     </table>
-
+  </div>
     <br>
     <div>
-      <a href="home.html">Home</a> |
-      <a href="cadastros.html">Cadastros</a> |
-      <a href="lancamentos.html">Lançamentos</a> |
-      <a href="relatorios.html">Relatórios</a> |
-      <a href="perfil.html">Perfil</a>  |
-      <a href="sair.html">Sair</a>  |
+      <a href="home.html"class="btn btn-primary">Home</a> |
+      <a href="cadastros.html"class="btn btn-secondary">Cadastros</a> |
+      <a href="lancamentos.html"class="btn btn-warning">Lançamentos</a> |
+      <a href="relatorios.html"class="btn btn-info" >Relatórios</a> |
+      <a href="perfil.html" class="btn btn-success">Perfil</a>  |
+      <a href="sair.html" class="btn btn-danger">Sair</a>  |
     </div>
 
   </body>
