@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados - IBGE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body onload="carregarEstados()">
+      
+    <div class="jumbotron">
+        <h1>Carregar Estados IBGE</h1>
+        <p>Validação e apresentação em Bootstrap</p>
+    </div>
+
+    <form>
+
+        <input type="button" value="Carregar Regioes" class="btn btn-primary" onclick="carregarDistritos()">
+
+        <select name="distritos" id="distritos" onchange="carregarEstados()">
+             <option value="">Selecione:</option>
+        </select>
+        <select name="estados" id="estados" onchange="carregarCidades()">
+            <option value="">Selecione:</option>
+        </select>
+
+        <select name="cidades" id="cidades">
+            <option value="">Selecione:</option>
+        </select>
+
+    </form>
+
+    <script src="api.js"></script>
+
+</body>
+</html>
