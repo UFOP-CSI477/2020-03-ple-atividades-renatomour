@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="JavaScript" src="calculadora.js"></script>
+    <link rel="stylesheet" href="calculadora.css">
+    <title>calculadora</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="" name="formCalculadora">
+        <div class=" jumbotron" id="calculadora">
+   <h1>Calculadora Simples </h1>
+   <p>com as operaçoes basicas (+ - / *)</p>
+            <input type="text" id="visor" name="visor">
+            <div id="l1">
+                <input type="button" value="7" class="botao borda"  onclick="botao(value)">
+                <input type="button" value="8" class="botao borda" onclick="botao(value)">
+                <input type="button" value="9" class="botao borda" onclick="botao(value)">
+                <input type="button" class="btn btn-warning"value="/" class="botao borda" onclick="botao(value)">
+            </div>
+            <div id="l2">
+                <input type="button" value="4" class="botao borda" onclick="botao(value)">
+                <input type="button" value="5" class="botao borda" onclick="botao(value)">
+                <input type="button" value="6" class="botao borda" onclick="botao(value)">
+                <input type="button" class="btn btn-success" value="*" class="botao borda" onclick="botao(value)">
+            </div>
+            <div id="l3">
+                <input type="button" value="1" class="botao borda" onclick="botao(value)">
+                <input type="button" value="2" class="botao borda" onclick="botao(value)">
+                <input type="button" value="3" class="botao borda" onclick="botao(value)">
+                <input type="button" class="btn btn-danger" value="-" class="botao borda" onclick="botao(value)">
+            </div>
+            <div id="l4">
+                <input type="button"  class="btn btn-danger" value="C" class="botao borda" onclick="resetar()">
+                <input type="button" value="0" class="botao borda" onclick="botao(value)">
+                <input type="button" value="=" class="botao borda" onclick="calcular()">
+                <input type="button" class="btn btn-info"value="+" class="botao borda" onclick="botao(value)">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

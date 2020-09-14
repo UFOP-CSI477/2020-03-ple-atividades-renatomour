@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ranchers', cursive;
+    font-weight:300;
+    font-size: 30px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300vh;
+    background: blue;
+  
+}
+input { 
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+}
+input[type=text] {
+    width: calc(100% - 4px);
+    height: 40px;
+}
+input[type=button] {
+    width: 150px;
+    height: 80px;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+div#calculadora {
+    box-shadow: 0 0 20px rgb(140, 211, 162);
+}
+div#calculadora div {
+    display: flex;
+    
+}
+
+input[type=button]:hover {
+    filter: brightness(80%);
+}
+input[type=button]:active {
+    transform: scale(1.0);
+}

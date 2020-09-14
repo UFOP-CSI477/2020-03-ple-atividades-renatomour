@@ -56,12 +56,12 @@ function validarString(){
     
 function calcular() {
 
+    let n1 = document.dados.valor1;
     let n2 = document.dados.valor2;
-    let n3 = document.dados.valor3;
 
-    if ( validar(n2, "alerta2", "label2") 
-            && validar(n3, "alerta3","label3") ) {
-        let resultado = parseInt(n2.value) + parseInt(n3.value);
+    if ( validar(n1, "alerta1", "label1") 
+            && validar(n2, "alerta2","label2") ) {
+        let resultado = parseInt(n1.value) / (parseInt(n2.value)+ (parseInt(n2.value)));
         document.dados.resultado.value = resultado;
     }
 
