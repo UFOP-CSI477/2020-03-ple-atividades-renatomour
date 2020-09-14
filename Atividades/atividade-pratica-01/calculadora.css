@@ -6,14 +6,7 @@
     font-weight:300;
     font-size: 30px;
 }
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300vh;
-    background: blue;
-  
-}
+
 input { 
     margin: 2px;
     border: none;
