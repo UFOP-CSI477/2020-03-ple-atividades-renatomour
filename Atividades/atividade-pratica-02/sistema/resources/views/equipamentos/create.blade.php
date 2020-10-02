@@ -3,30 +3,68 @@
 @section('conteudo')
 
 
-    <form action="{{ route('equipamentos.store') }}" method="post">
+ 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+   
+             <title>Cadastro de Equipamentos</title>
 
-        @csrf
-
-        <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" name="nome" id="nome">
-        </div>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
 
 
-        <div class="form-group">
-            <label for="produto_id">Produto</label>
-            <input type="text" class="form-control" name="produto_id" id="produto_id">
-        </div>
+    <style>
+     body{
 
+     
+        background-color:white;
         
+      }
+    </style>
+    <!-- Custom styles for this template -->
 
-        <div class="text-right">
-            <input type="submit" value="Cadastrar" class="btn btn-primary">
-            <input type="reset" value="Limpar" class="btn btn-danger">
-        </div>
+  </head>
+  <body >
 
-    </form>
+    <form  action="{{route('equipamentos.store')}}" method="post" style="border-style:solid; margin:34px; ">
+        @csrf
+    
+          <div class="container" style="place-items:center; margin-top:34pt; margin-bottom:30pt">
+          <h1 class="card-title" style="text-align:center; margin-bottom:25pt;">Cadastrar Equipamento</h1>
+          <div class="row">
+          <div class="col-md-6">
+          <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input required="required" type="text" class="form-control" id="nome" placeholder="Equipamento" name="nome">
+                
+      
+      
+          </div>
+          </div>
+          </div>
+      
 
-    <a href="{{ route('equipamentos.index') }}">Voltar</a>
 
-@endsection('conteudo')
+        <button type="submit" class="btn btn-success  mx-sm-1">Inserir</button>
+        <button type="reset" class="btn btn-danger   mx-sm-6 ">Limpar</button>
+    
+    
+    
+    </div>
+
+    
+       </form>
+  
+  </body>
+
+</html>
+
+@endsection

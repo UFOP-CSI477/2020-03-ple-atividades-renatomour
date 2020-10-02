@@ -1,7 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EquipamentoController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegistroController;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\Equipamento;
+use App\Models\Registro;
+use App\Models\User;
 
 
 
@@ -16,26 +24,53 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Models\Produto;
-use App\Http\Controllers\ProdutoController;
-use App\Http\Controllers\EquipamentoController;
-
 Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/produtos',ProdutoController::class);
-Route::resource('/equipamentos',EquipamentoController::class);
 
-/* Route::get('/produtos', function () {
-    return Produto::all();
-});
 
-Route::get('/produtos/{id}', function ($id) {
-  $produto = Produto::findOrFail($id);
-    if($produto == null){
+Route::resource('/equipamentos', EquipamentoController::class);
 
-        return 'ID INVALIDO';
+Route::resource('/users', UserController::class)->middleware('auth');
+
+Route::resource('/registros', RegistroController::class);
+
+Route::get('/geral', function () {
+
+    $equipamentos = Equipamento::orderBy('id')->get();
+        $registros = Registro::orderBy('id')->get();
+
+    return view('geral', ['equipamentos' => $equipamentos, 'registros' => $registros]);
+})->name('geral');
+
+Route::get('/administrativo', function () {
+
+    $equipamentos = Equipamento::orderBy('id')->get();
+        $registros = Registro::orderBy('id')->get();
+            $users = User::orderBy('id')->get();
+
+    $lista = array();
+    $equi = Equipamento::get();
+   
+    foreach($equi as $e){
+
+        $query = Registro::where('equipamento_id','=', $e->id)->get();
+
+        if(sizeof($query)>0){
+            $lista[$e->nome] = $query;
+        } 
     }
-    return $produto;
-}); */
+
+    return view('administrativo',['equipamentos'
+    =>$equipamentos,'registros'
+    => $registros,'users'
+    =>$users, 'listas'
+    =>$lista]);
+})->middleware('auth')->name('administrativo');
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

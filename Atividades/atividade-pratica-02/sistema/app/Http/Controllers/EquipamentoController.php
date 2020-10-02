@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Registro;
 use App\Models\Equipamento;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+use Illuminate\Support\Facades\Auth;
 
 class EquipamentoController extends Controller
 {
@@ -14,8 +18,9 @@ class EquipamentoController extends Controller
      */
     public function index()
     {
-        $equipamentos =Equipamento::orderby('id')->get();
-        return view('equipamentos.index',['equipamentos'=>$equipamentos]);
+        $equipamentos = Equipamento::orderBy('nome')->get();
+        return view('equipamentos.index', ['equipamentos' => $equipamentos]);
+
     }
 
     /**
@@ -25,7 +30,13 @@ class EquipamentoController extends Controller
      */
     public function create()
     {
-        return view('equipamentos.create');
+        
+        if(Auth::check()){    
+            return view('equipamentos.create');
+        }else{
+            session()->flash('mensagem', 'Não é Possivel');
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -36,21 +47,38 @@ class EquipamentoController extends Controller
      */
     public function store(Request $request)
     {
-        Equipamento::create($request->all());
+       
+        if(!empty($request->all())){
+            if(Auth::check()){ 
+                Equipamento::create($request->all());
+                session()->flash('mensagem', 'Cadastrado com Sucesso!');
+                return redirect()->route('administrativo');
+            }else{
+                session()->flash('mensagem', 'Não é Possivel');
+                return redirect()->route('login');
+            }
+        }else{
+            session()->flash('mensagem', 'Preencha os Dados Corretamente!');
+            return redirect()->route('equipamentos.index');
+        }
 
-          session()->flash('mensagem','cadastrado com sucesso ');
-          return redirect()->route('equipamentos.index');
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified administrativo
      *
      * @param  \App\Models\Equipamento  $equipamento
      * @return \Illuminate\Http\Response
      */
     public function show(Equipamento $equipamento)
     {
-        return view('equipamentos.show',['equipamento'=>$equipamento]);
+        if(Auth::check()){ 
+            return view('equipamentos.show',['equipamento' =>$equipamento]);
+        }else{
+            session()->flash('mensagem', 'Não é Possivel');
+            return redirect()->route('login');
+        }
+    
     }
 
     /**
@@ -60,8 +88,13 @@ class EquipamentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Equipamento $equipamento)
-    {
-        return view('equipamentos.edit',['equipamento'=>$equipamento]);
+    {   
+        if(Auth::check()){ 
+             return view('equipamentos.edit', ['equipamento' => $equipamento]);
+        }else{
+            session()->flash('mensagem', 'Não é Possivel');
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -73,12 +106,16 @@ class EquipamentoController extends Controller
      */
     public function update(Request $request, Equipamento $equipamento)
     {
-        $equipamento->fill($request->all());
-        $equipamento->save();
+        if(Auth::check()){ 
+            $equipamento->fill($request->all());
+            $equipamento->save();
 
-
-        session()->flash('mensagem','ATUALIZADO COM SUCESSO');  
-        return redirect()->route('equipamentos.index');
+            session()->flash('mensagem', 'Atualizado com sucesso');
+            return redirect()->route('equipamentos.index');
+        }else{
+            session()->flash('mensagem', 'Não é Possivel');
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -89,8 +126,20 @@ class EquipamentoController extends Controller
      */
     public function destroy(Equipamento $equipamento)
     {
-        $equipamento->delete();
-        session()->flash('mensagem','excluido com sucesso!');
-        return redirect()->route('equipamentos.index');
+        
+        if(Auth::check()){ 
+            if($equipamento->registros->count() > 0){
+                session()->flash('mensagem', 'Não é Possivel Já Possui Agendamento!');
+            }else{
+                $equipamento->delete();
+                session()->flash('mensagem', 'Excluído com sucesso');
+            }
+            return redirect()->route('equipamentos.index');
+        }else{
+            session()->flash('mensagem', 'Não é Possivel');
+            return redirect()->route('login');
+        }
     }
+
+ 
 }

@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Equipamento;
-use App\Models\Produto;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EquipamentoFactory extends Factory
@@ -15,6 +14,7 @@ class EquipamentoFactory extends Factory
      */
     protected $model = Equipamento::class;
 
+    
     /**
      * Define the model's default state.
      *
@@ -23,8 +23,7 @@ class EquipamentoFactory extends Factory
     public function definition()
     {
         return [
-            'nome' =>$this->faker->city,
-            'produto_id'=>-Produto::factory()
+            'nome' => $this->faker->company,
         ];
     }
 }
