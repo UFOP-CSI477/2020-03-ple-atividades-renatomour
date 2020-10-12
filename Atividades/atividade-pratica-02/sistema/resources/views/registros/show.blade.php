@@ -31,7 +31,7 @@
   <body>
 
 
-    <div class="album py-1 bg-info">
+    <div class="album py-1 bg-danger">
       <div class="container">
 
       <h1 class="mx-auto" style="text-align:center; margin-bottom:20pt;">Registro: {{$registro->id}}</h1>

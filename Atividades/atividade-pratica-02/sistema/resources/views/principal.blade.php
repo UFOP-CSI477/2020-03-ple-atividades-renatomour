@@ -72,7 +72,7 @@
       
           <a  href="{{ route('login') }}" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" stroke="currentColor"></svg>
-            <strong>Login</strong>
+            <strong>L </strong>
           </a>
      
       
