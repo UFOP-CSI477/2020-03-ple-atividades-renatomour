@@ -22,10 +22,12 @@ O trabalho final tem como tema o desenvolvimento de um Sistema de reserva das Sa
   
 ### 2. Funcionalidades previstas e não implementadas
 
-
+foram implementadas as funcionalidades previstas 
 ### 3. Outras funcionalidades implementadas
 1-area geral
+
 2-area administrativa 
+
 3-autenticação 
 
 ### 4. Principais desafios e dificuldades
@@ -48,5 +50,8 @@ https://laravel.com/docs/8.x/database
 
 (Github)
 https://github.com/fboliveira
-foram utilizados os conceitos aprendidos durante a disciplina,tendo como base os codigos,explicações e sugestôes do docente Fernando B Oliveira 
+
+foram utilizados os conceitos aprendidos durante a disciplina,tendo como base os codigos,explicações e sugestôes do docente 
+
+Fernando B Oliveira 
 
