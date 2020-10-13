@@ -42,8 +42,10 @@ O trabalho final tem como tema o desenvolvimento de um Sistema de reserva das Sa
 <!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
 (Bootstrap)
 https://getbootstrap.com/docs/4.5/getting-started/introduction/
+
 (Laravel)
 https://laravel.com/docs/8.x/database
+
 (Github)
 https://github.com/fboliveira
 foram utilizados os conceitos aprendidos durante a disciplina,tendo como base os codigos,explicações e sugestôes do docente Fernando B Oliveira 
