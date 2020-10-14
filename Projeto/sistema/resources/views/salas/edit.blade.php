@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
 
-    <title>Cadastro de Salas</title>
+    <title>Atualizar Sala</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
@@ -36,7 +36,7 @@
     
     <div class="container" style="place-items:center; margin-top:30pt; margin-bottom:30pt">
     
-           <h1 class="card-title" style="text-align:center; margin-bottom:20pt;">Cadastro de Salas </h1>
+           <h1 class="card-title" style="text-align:center; margin-bottom:20pt;">Atualizar Salas </h1>
     <div class="row">
     <div class="col-md-6">
     <div class="form-group">

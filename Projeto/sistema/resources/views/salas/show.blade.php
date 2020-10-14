@@ -34,7 +34,7 @@
     <div class="album py-1 bg-light">
     <div class="container">
 
-              <h1 class="mx-auto" style="text-align:center; margin-bottom:20pt;">Coleta: {{$sala->nome}}</h1>
+              <h1 class="mx-auto" style="text-align:center; margin-bottom:20pt;">Sala: {{$sala->nome}}</h1>
 
 
     <table class="table table-bordered table-sm">
@@ -45,8 +45,8 @@
            <th>ID</th>
            <th>Nome</th>
            <th>Tipo</th>
-           <th>Created_at</th>
-           <th>Updated_at</th>
+           <th>Criada em </th>
+           <th>Atualizado em </th>
  
     </tr>
 </thead>
@@ -60,7 +60,7 @@
         <tr>
         <td>{{$sala->id}}</td>
         <td>{{$sala->nome}}</td>
-        <td>{{$sala->tipo}}</td>
+        <td>{{$sala->descricao}}</td>
         <td>{{$sala->created_at}}</td>
         <td>{{$sala->updated_at}}</td>
   

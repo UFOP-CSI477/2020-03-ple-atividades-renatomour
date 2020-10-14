@@ -46,11 +46,18 @@
                 <label for="nome">Nome: </label>
                 <input value="{{$pessoa->nome}}"type="text" class="form-control" id="nome" placeholder="nome da pessoa" name="nome">
     
-                 <label for="nome">Tipo: </label>
-                 <input value="{{$pessoa->tipo}}"type="text" class="form-control" id="tipo" placeholder="tipo sanguineo" name="tipo">
-         
-         
-         </div>
+        
+                <label for="nome">Tipo: </label>
+                <select name="tipo" id="tipo" class="form-control" required="required">
+                
+                    
+                    <option value="Estudante">ESTUDANTE</option>
+                    <option value="Professor">PROFESSOR</option>
+                    <option value="Tecnico">TECNICO</option>
+                
+                    <select></select>
+                    </div>
+          </div>
          </div>
 
 

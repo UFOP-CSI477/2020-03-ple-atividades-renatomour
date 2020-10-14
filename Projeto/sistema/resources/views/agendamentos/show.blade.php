@@ -34,7 +34,7 @@
     <div class="album py-1 ">
       <div class="container">
 
-      <h1 class="mx-auto" style="text-align:center; margin-bottom:20pt;">Registro: {{$agendamento->id}}</h1>
+      <h1 class="mx-auto" style="text-align:center; margin-bottom:20pt;">Reserva: {{$agendamento->id}}</h1>
 
 
     <table class="table table-bordered table-sm">
@@ -43,11 +43,11 @@
     <tr style="color=white;">
     <th>ID</th>
               <th>Data</th>
-                  <th>Local De Coleta</th>
-                      <th>Cidade </th>
-                      <th>ID Doador</th>
+                  <th>Nome do Local </th>
+                      <th>Tipo</th>
+                      <th>ID Pessoa</th>
                         <th>Nome</th>
-                        <th>Tipo Sanguineo</th>
+                        <th>Tipo</th>
  
     </tr>
 </thead>
